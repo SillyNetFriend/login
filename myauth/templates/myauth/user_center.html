@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>个人中心</h1>
+    <a href="{% url 'myauth:主页' %}">回到主页</a>
+    <a href="{% url 'myauth:个人中心' %}">个人中心</a>
+    <a href="{% url 'myauth:编辑个人信息' %}">编辑个人信息</a>
+    <a href="{% url 'myauth:修改密码' %}">修改密码</a>
+
+    <div>
+        <p>{{ 用户.username }}</p>
+        <p>{{ 用户.email }}</p>
+        <p>{{ 用户.普通会员表.昵称 }}</p>
+        <p>{{ 用户.普通会员表.生日 }}</p>
+    </div>
+
+</body>
+</html>
